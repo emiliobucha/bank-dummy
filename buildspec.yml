@@ -10,3 +10,5 @@ phases:
 artifacts:
   files:
     - target/*.jar
+    - Dockerfile
+    
