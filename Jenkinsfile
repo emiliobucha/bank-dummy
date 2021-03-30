@@ -15,7 +15,9 @@ pipeline {
             }
         }
         stage('Upload') {
-            s3Upload(file:'bucha-artifact-test.zip', bucket:'semperti-rapientrega-development-s3-backend-artifact', path:'bucha-artifact-test.zip')
+            steps {
+                s3Upload(file:'bucha-artifact-test.zip', bucket:'semperti-rapientrega-development-s3-backend-artifact', path:'bucha-artifact-test.zip')
+            }
         }
     }
 }
