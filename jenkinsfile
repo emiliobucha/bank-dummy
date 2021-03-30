@@ -1,0 +1,11 @@
+pipeline {
+    agent {label 'bc-sebastianmascolo'}
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn package -B -DskipTests'
+            }
+        }
+    }
+}
+
