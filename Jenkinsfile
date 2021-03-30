@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    options {
+	    withAWS(region:'us-east-1',credentials:'AWS Jenkins')
+    }
     stages {
         stage('Build') {
             steps {
